@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../stylesheets/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="overflow-hidden">
+<!-- component -->
+<!-- This is an example component 
+    Instagram: ccornejo__ -->
+    <div class='grid grid-cols-12'>
+        <div class="col-span-4 text-white font-sans font-bold bg-black min-h-screen pl-7">
+            <form action="/login" method="post">
+            <div class="grid grid-rows-6 grid-flow-col min-h-screen items-center justify-items-start">
+                
+
+                    <div class="row-span-4 row-start-2 text-4xl">
+                        Sign In                    
+                        <div class="pt-10 pr-20">                        
+                            <label class="text-sm font-sans font-medium">
+                                Email
+                            </label>
+                            <input 
+                                type="text" 
+                                name="email" 
+                                placeholder="Write your email" 
+                                class="w-full bg-black py-3 px-12 border hover: border-gray-500 rounded shadow text-base font-sans"/>                            
+                        </div>
+                        <div class="pt-2 pr-20">
+                            <label class="text-sm font-sans font-medium">
+                                Password
+                            </label>
+                            <input 
+                                type="password" 
+                                name="password" 
+                                placeholder="Write your password" 
+                                class=" w-full bg-black py-3 px-12 border hover: border-gray-500 rounded shadow text-base font-sans"/>
+                            <a href="" class="text-sm font-sans font-medium text-gray-600 underline">
+                                Forgot password?
+                            </a>
+                        </div>
+                        <!-- Button -->
+                        <div class="text-sm font-sans font-medium w-full pr-20 pt-14">
+                            <button 
+                                type="submit"   
+                                class="text-center w-full py-4 bg-blue-700 hover:bg-blue-400 rounded-md text-white">
+                                    SIGN IN
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Text -->
+                <a href="/" class="text-sm font-sans font-medium text-gray-400 underline">
+                    Don´t have an account? Sign up
+                </a>
+            </div>         
+        </div>
+
+        <!-- Second column image -->
+        <div class="banner col-span-8 text-white font-sans font-bold">
+            <!-- Aquí iría algún comentario -->
+        </div>    
+</div>
+
+
+
+<style>
+    .banner {
+        background: url( 'https://s1.1zoom.me/b6058/448/Dogs_Svetlana_Shelemeteva_Hug_Little_girls_568770_1920x1080.jpg' );
+        background-repeat: no-repeat;
+        background-size: cover        
+    }
+</style>
+</body>
+</html>
