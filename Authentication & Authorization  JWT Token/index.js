@@ -15,6 +15,24 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(cookieParser());
 app.set("view engine", "ejs");
 
+
+// Middleware for authentication
+function isLoggedIn(req, res, next) {
+  const token = req.cookies.token;
+
+  if (!token) {
+    return res.status(401).send("Access Denied: Please log in first");
+  }
+
+  try {
+    const decoded = jwt.verify(token, "secret");
+    req.user = decoded; // store user info in req.user
+    next();
+  } catch (err) {
+    return res.status(403).send("Invalid or expired token");
+  }
+}
+
 app.get("/", (req, res) => {
   res.render("index");
 });
